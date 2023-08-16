@@ -2,28 +2,21 @@
 /**
  * main - main function
  *
- * Return: nothing
+ * Return: always 0
  */
 int main(void)
 {
-	int counter = 2;
-	long int a = 1;
-	long int b = a + 1;
-	long int c = a + b;
+	int a;
+	int b = 0;
 
-	printf("%ld, %ld, ", a, b);
-	while (counter < 50)
+	for (a = 0; a < 1024; a++)
 	{
-		printf("%ld", c);
-		counter++;
-		a = b;
-		b = c;
-		c = a + b;
-		if (counter < 50)
+		if (a % 3 == 0 || a % 5 == 0)
 		{
-			printf(", ");
+			b += a;
 		}
+
 	}
-	printf("\n");
+	printf("%d\n", b);
 	return (0);
 }
