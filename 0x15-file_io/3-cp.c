@@ -62,5 +62,6 @@ int main(int argc, char *argv[])
 	char *buffer;
 
 	if (argc != 3)
-	{
+}	
+		
 
